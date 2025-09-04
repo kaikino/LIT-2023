@@ -1,0 +1,13 @@
+<h1>成績</h1>
+<form class="record" action="/record" method="POST">
+  <div>
+    <p>レベル<input class="level" id="level" name="level"></p>
+    <p>点数<input class="score" id="score" name="score" value=""></p>
+    <p>間違えた回数<input class="mistakes" id="mistakes"></p>
+  </div>
+  <input class="player-name" id="name" type="text" name="name" placeholder="プレイヤー名">
+  <button type = "submit">記録</button>
+</form>
+<form class="no-record" action = "/" method = "GET">
+  <button type = "submit">記録しない</button>
+</form>

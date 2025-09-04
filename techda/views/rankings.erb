@@ -1,0 +1,49 @@
+<h1>ランキング</h1>
+
+<select id="level">
+    <option value="1">Level 1</option>
+    <option value="2">Level 2</option>
+    <option value="3">Level 3</option>
+</select>
+
+<table class="level1">
+    <% i = 1 %>
+    <% @rankings1.each do |ranking| %>
+    <tr>
+        <td><%= i %>位</td>
+        <td><%= ranking.name %></td>
+        <td><%= ranking.score %>pt</td>
+    </tr>
+    <% i = i + 1 %>
+    <% end %>
+</table>
+
+
+<table class="level2">
+    <% i = 1 %>
+    <% @rankings2.each do |ranking| %>
+    <tr>
+        <td class="first-col"><%= i %>位</td>
+        <td class="second-col"><%= ranking.name %></td>
+        <td><%= ranking.score %>pt</td>
+    </tr>
+    <% i = i + 1 %>
+    <% end %>
+</table>
+
+<table class="level3">
+    <% i = 1 %>
+    <% @rankings3.each do |ranking| %>
+    <tr>
+        <td class="first-col"><%= i %>位</td>
+        <td class="second-col"><%= ranking.name %></td>
+        <td><%= ranking.score %>pt</td>
+    </tr>
+    <% i = i + 1 %>
+    <% end %>
+</table>
+
+<form action="/" method="GET">
+    <button type="submit">戻る</button>
+</form>
+
